@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#bfbfbf"
+             android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:strokeWidth="0dp"
+        app:strokeColor="@color/black"
+        app:cardElevation="28dp"
+        app:cardCornerRadius="30dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Media -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            app:srcCompat="@drawable/jonsnow"
+            android:id="@+id/movieImage"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/black">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/movieRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/app_name"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/white"
+
+                />
+
+            <TextView
+                android:id="@+id/movieDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="Add to favorites"
+                android:id="@+id/addToFavButton"
+                style="?attr/borderlessButtonStyle"
+                android:layout_weight="5"
+                android:textColor="#9A2617"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Recommendations"
+                android:id="@+id/recommendationsBtn"
+                style="?attr/borderlessButtonStyle"
+                android:layout_weight="5"
+                android:textColor="#003333"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

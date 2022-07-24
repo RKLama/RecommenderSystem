@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.movierecommendationapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Movie Recommendations App"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MovieRecommendationApp">
+        <activity
+            android:name=".recommendations.RecommendationActivity"
+            android:label="Recommended Movies"
+
+            android:exported="true" />
+        <activity android:name=".favorites.FavoritesActivity"
+            android:label="Favourite Movies"/>
+        <activity
+            android:name=".cardview.CardViewActivity"
+            android:label="Our Catalog"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".recommendedmovies" />
+        <activity android:name=".ShowMoviesActivity"
+            android:label="Welcome"/>
+<!--        <activity-->
+<!--            android:name=".ProfileActivity"-->
+<!--            android:exported="true"-->
+<!--            android:label="Profile"/>-->
+        <activity
+            android:name=".movieslist"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
